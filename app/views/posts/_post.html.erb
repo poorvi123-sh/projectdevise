@@ -1,0 +1,32 @@
+<tr>
+   <td>
+      <p><%= link_to post_likes_path(post.id), method: :post,remote:true  do%>
+         <i class="fa fa-thumbs-up" aria-hidden="true" style="font-size:24px;"></i><%end%>
+      </p>
+      <div id="like_<%= post.id%>">
+         <%= render 'likes/like_post',post:post%>
+      </div>
+   </td>
+   <td><%= post.body %></td>
+   <td><%= post.description %><br><br><br>
+      <%= link_to " Show Comments",post,class:"btn btn-secondary text-light",remote: true %>
+   </td>
+   <td>
+      <div id="editpost_<%= post.id%>">
+      </div>
+   </td>
+   <td>
+      <div id="unlike_<%= post.id%>">       
+         <% pre_like = post.likes.find { |like| like.user_id == current_user.id} %>
+         <% if pre_like %>
+         <%= link_to post_like_path(post, pre_like),method: :delete,remote:true do %>
+        <i class="fa fa-thumbs-down" aria-hidden="true" style="font-size:24px"></i>
+         <%end%>  
+         <%end%>
+      </div>
+   </td>
+   <td><%= link_to 'Show',post%></td>
+   <td><%= link_to 'Edit', edit_post_path(post) %><br></td>
+   <td><%= link_to 'Destroy', post, method: :delete ,data: { confirm: 'Are you sure?' } %><br>
+   </td>
+</tr>

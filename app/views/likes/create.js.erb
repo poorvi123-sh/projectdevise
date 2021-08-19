@@ -1,0 +1,2 @@
+$('#like_<%= @post.id%>').html("<%= escape_javascript(render partial: 'likes/like_post', locals:{post: @post})%>");
+

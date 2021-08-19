@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<h1>Users Posts</h1>
+<table class="table" id="posts">
+   <thead class="thead-dark">
+      <tr>
+         <th>Like</th>
+         <th>Body</th>
+         <th>Description</th>
+         <th>Show Comments</th>
+         <th>Likes Count</th>
+         <th>Show</th>
+         <th>Edit</th>
+         <th>Destroy</th>
+      </tr>
+   </thead>
+   <tbody id="tablebody">
+      <% @posts.each do |post| %>   
+      <%= render 'posts/post',post:post%>
+      <% end %> 
+   </tbody>
+</table>
+<br>
+<%= link_to 'Add New Post',new_post_path,remote:true %>
+<div id="form">
+</div>
