@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.4'
+gem 'rails', '~> 6.1.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
@@ -25,8 +25,6 @@ gem 'devise'
 gem 'omniauth-facebook', '~> 4.0'
 gem 'activerecord-session_store', '~> 1.0'
 gem "omniauth-rails_csrf_protection"
-gem "omniauth-oauth", "~> 1.0.1" 
-gem 'omniauth-github', '~> 1.1', '>= 1.1.2'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
