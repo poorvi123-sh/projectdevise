@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :posts,dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable,:validatable,
-        :omniauthable, omniauth_providers: [:facebook]
+        :omniauthable, omniauth_providers: [:facebook,:google_oauth2]
 
 
  def self.create_from_provider_data(provider_data)

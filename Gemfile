@@ -25,6 +25,7 @@ gem 'devise'
 gem 'omniauth-facebook', '~> 4.0'
 gem 'activerecord-session_store', '~> 1.0'
 gem "omniauth-rails_csrf_protection"
+gem 'omniauth-google-oauth2','~> 0.8.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
